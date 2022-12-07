@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="icon" href="assets/img/icon.png">
+    <title>Cadastro - BarberAgend</title>
+    <script type="text/javascript">
+        function mascara(telefone){ 
+            if(telefone.value.length == 0)
+                telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+            if(telefone.value.length == 3)
+                telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+ 
+            if(telefone.value.length == 10)
+                telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
+  
+}
+    </script>
+</head>
+
+<body style="background-image:url('assets/img/header-bg.jpg');">
+    <div class="container">
+        <div class="form">
+            <form method="POST" action="./assets/php/registrar.php">
+
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                </div>
+
+               
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="primeiro_nome" placeholder="Digite seu primeiro nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <!-- <input id="number" type="tel" name="celular"  placeholder="(xx) xxxxx-xxxx" required> -->
+                        <input type="text" name="celular" id="telefone" size="20" maxlength="15" placeholder="(xx) xxxxx-xxxx" onkeypress="mascara(this)"> 
+
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="confirmPassword" type="password" name="senha_conf" placeholder="Digite sua senha novamente" required>
+                    </div>
+
+
+
+                <div class="continue-button">
+                    <button type="submit" value="Cadastrar" id="cadastrar" name="cadastrar"><a href="#">Cadastrar</a> </button>
+                 <br> <br>   <label class="finaltext">Já possui uma conta? <a  style ="color: #e4b917;"href="login.html">Faça seu Login</a></label>
+                 <br> <br> <label class="finaltext">Volte a Tela de <a  style ="color: #e4b917;"href="index.php">Inicio</a></label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

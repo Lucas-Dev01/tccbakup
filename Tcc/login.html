@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="icon" href="assets/img/icon.png">
+    <title>Login - BarberAgend</title>
+</head>
+
+<body style="background-image:url('assets/img/header-bg.jpg');">
+    <div class="container">
+        <!-- <div class="form-image">
+            <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+        </div> -->
+        <div class="form">
+            <form form method="POST" action="./assets/php/login.php">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Logar</h1>
+                    </div>
+                </div>
+
+               
+        
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="text" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                   
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+
+             
+
+                <div class="continue-button">
+                    <button type="submit" value="logar" id="logar" name="logar"><a href="#">Logar</a> </button> <br>
+                  <br>  <label class="finaltext">Não possui uma conta? <a  style ="color: #e4b917;"href="cadastro.html">Faça seu Cadastro</a></label>
+                  
+                  <br> <br> <label class="finaltext">Volte a Tela de <a  style ="color: #e4b917;"href="index.php">Inicio</a></label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
